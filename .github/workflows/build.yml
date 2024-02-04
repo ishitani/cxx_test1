@@ -111,3 +111,9 @@ jobs:
       run: |
         cd build
         cmake --build .
+
+    - name: Run tests
+      shell: cmd
+      run: |
+        cd build
+        ctest -VV
