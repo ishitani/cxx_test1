@@ -25,6 +25,12 @@ jobs:
       shell: bash
       run: |
         ls -la
-        env
         cd build
-        make
+        make -j 5
+
+    - name: Run tests
+      shell: bash
+      run: |
+        ls -la
+        cd build
+        make test
