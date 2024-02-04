@@ -34,3 +34,32 @@ jobs:
         ls -la
         cd build
         make test
+
+  build_macos14:
+    name: "macOS14 M1"
+    runs-on: macos-14
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Run cmake
+      shell: bash
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+
+    - name: Build
+      shell: bash
+      run: |
+        ls -la
+        cd build
+        make -j 4
+
+    - name: Run tests
+      shell: bash
+      run: |
+        ls -la
+        cd build
+        make test
