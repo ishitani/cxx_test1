@@ -110,10 +110,10 @@ jobs:
       shell: cmd
       run: |
         cd build
-        cmake --build .
+        cmake --build . -v --config Release
 
     - name: Run tests
       shell: cmd
       run: |
         cd build
-        ctest -VV
+        ctest -C Release -VV
