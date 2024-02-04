@@ -15,4 +15,6 @@ jobs:
     - name: Run cmake
       shell: bash
       run: |
-        ls -la
+        mkdir build
+        cd build
+        cmake ..
