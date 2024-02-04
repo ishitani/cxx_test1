@@ -98,4 +98,4 @@ venv.bak/
 .mypy_cache/
 
 *~
-build/**
+build/

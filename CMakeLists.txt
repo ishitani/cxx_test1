@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(CXXTest1 CXX C)
-
 SET(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
-
-include(cmake/third-party.cmake)
 set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
